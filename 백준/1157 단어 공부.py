@@ -34,6 +34,8 @@ from collections import Counter
 ## 2번째: 디버깅하면서 코드 깔끔하게 수정하기
 words = [w for w in input().upper()]
 alphabet_with_count = sorted(Counter(words).items(), key=lambda x:x[1], reverse=True)
+# Counter(words) --> dictionary {key: list의 각각의 요소들, value: list 각각 요소들의 개수}
+# Counter(list).items() --> [(list[0], count(list[0])), (), () ...] --> 리스트 안에 튜플 형태
 
 max_cnt = max([alphabet[1] for alphabet in alphabet_with_count])
 if len([i for i in alphabet_with_count if i[1] == max_cnt]) > 1:
