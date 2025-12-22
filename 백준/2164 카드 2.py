@@ -7,3 +7,4 @@ for i in range(1, int(input())+1):
 while len(L) > 1:
     L.popleft()
     L.append(L.popleft())
+print(L[0])
